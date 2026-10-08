@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* ========== Mic Recording Pulse Rings ========== */
+@keyframes mic-ring-1 {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes mic-ring-2 {
+  0% { transform: scale(1); opacity: 0.35; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+@keyframes mic-glow {
+  0%, 100% { box-shadow: 0 0 8px 2px rgba(129, 94, 255, 0.3); }
+  50% { box-shadow: 0 0 18px 6px rgba(129, 94, 255, 0.5); }
+}
+
+.mic-ring-1 {
+  animation: mic-ring-1 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.mic-ring-2 {
+  animation: mic-ring-2 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s infinite;
+}
+.mic-glow {
+  animation: mic-glow 1.5s ease-in-out infinite;
+}
+
+/* ========== AI Thinking Dots ========== */
+@keyframes thinking-dot {
+  0%, 80%, 100% { opacity: 0.25; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.1); }
+}
+.thinking-dot-1 { animation: thinking-dot 1.4s ease-in-out infinite; }
+.thinking-dot-2 { animation: thinking-dot 1.4s ease-in-out 0.2s infinite; }
+.thinking-dot-3 { animation: thinking-dot 1.4s ease-in-out 0.4s infinite; }
+
+/* ========== AI Thinking Shimmer Bar ========== */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.thinking-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* ========== Soundwave bars for mic ========== */
+@keyframes soundwave {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+.soundwave-bar {
+  animation: soundwave 0.8s ease-in-out infinite;
+}
